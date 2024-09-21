@@ -1,0 +1,76 @@
+{% extends 'userbase.html' %}
+{% load static %}
+
+
+{% block content %}
+<header>
+    <div class="container">
+        <h1 style="color: white;">Disease Prediction</h1>
+        <p class="subtitle">AI-Powered Health Analysis</p>
+    </div>
+</header>
+
+<main class="container">
+    <div class="alert">
+        <h3>Important Notice</h3>
+        <p style="color: #282c34;;">This prediction is not 100% guaranteed and should not replace professional medical advice. Always consult with a healthcare provider for accurate diagnosis and treatment.</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-header">Enter Your Symptoms</div>
+            <div class="card-body">
+                <form id="symptom-form">
+                    <div class="form-group">
+                        <label class="label-pre" for="symptoms">Describe your symptoms in detail:</label>
+                        <textarea id="symptoms" rows="6" placeholder="E.g., I've been experiencing a persistent cough for the past week, accompanied by..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-pre">Predict Disease</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Prediction Results</div>
+            <div class="card-body">
+                <div class="result-item">
+                    <h3>Predicted Condition:</h3>
+                    <p class="result-value" style="color: #282c34;">Common Cold</p>
+                </div>
+                <div class="result-item">
+                    <h3>Confidence Level:</h3>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <p style="color: #282c34;">75% confidence</p>
+                </div>
+                <div class="result-item">
+                    <h3>Recommended Specialist:</h3>
+                    <div class="doctor-info">
+                        <img src="https://www.nch.com.np/wp-content/uploads/2020/06/Dr-Amit-Shrestha-scaled.jpg" alt="Dr. Jane Smith" class="doctor-avatar">
+                        <div>
+                            <p class="result-value">Dr. Jane Smith</p>
+                            <p>General Practitioner</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-pre">Book Appointment</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Help Us Improve</div>
+        <div class="card-body">
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label class="label-pre" for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" rows="4" placeholder="Share your experience or suggestions to help us enhance our prediction system..."></textarea>
+                </div>
+                <button type="submit" class="btn-pre">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
